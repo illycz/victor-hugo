@@ -22,11 +22,11 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <main class="pb7" role="main">
+    <main>
       {{ block "main" . }}{{ end }}
     </main>
 
-    <script src="app.js"></script>
+    <script src='{{ "app.js" | absURL }}'></script>
     <script>
         if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
